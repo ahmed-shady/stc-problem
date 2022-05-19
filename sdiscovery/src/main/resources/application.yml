@@ -1,0 +1,10 @@
+server:
+  port:
+    8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    eviction-interval-timer-in-ms: 20_000
+    renewal-threshold-update-interval-ms: 300_000

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sdiscovery" />
+        <module name="employee" />
+        <module name="gateway" />
+        <module name="leave" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configserver" target="1.8" />
+      <module name="employee" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="leave" target="1.8" />
+      <module name="sdiscovery" target="1.8" />
+      <module name="university" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configserver" options="-parameters" />
+      <module name="employee" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="leave" options="-parameters" />
+      <module name="sdiscovery" options="-parameters" />
+      <module name="university" options="-parameters" />
+    </option>
+  </component>
+</project>

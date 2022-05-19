@@ -1,0 +1,36 @@
+server:
+  port: 5555
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    fetchRegistry: true
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: employeesModule
+          uri: lb://employee-service
+          predicates:
+            - Path=/employees/**
+        - id: leavesModule
+          uri: lb://leave-service
+          predicates:
+            - Path=/leaves/**
+      httpclient:
+        wiretap: true
+      httpserver:
+        wiretap: true
+
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
